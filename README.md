@@ -1,7 +1,5 @@
-# ML
-eINGT1029-1
+# ML (eINGT1029-1) Calidad del aire PM2.5
 
-Air Quality PM2.5 Prediction
 Objetivo
 Desarrollar un pipeline reproducible de Machine Learning para estimar PM2.5 utilizando variables meteorológicas y contaminantes atmosféricos.
 
@@ -21,6 +19,8 @@ Target:
 PM2_5
 Requisitos
 pip install -r requirements.txt
+
+
 Ejecución
 Abrir notebook:
 
