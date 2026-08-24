@@ -1,6 +1,7 @@
 # ML (eINGT1029-1) Calidad del aire PM2.5
 
 Objetivo
+
 Desarrollar un pipeline reproducible de Machine Learning para estimar PM2.5 utilizando variables meteorológicas y contaminantes atmosféricos.
 
 Dataset
