@@ -5,9 +5,11 @@ Objetivo
 Desarrollar un pipeline reproducible de Machine Learning para estimar PM2.5 utilizando variables meteorológicas y contaminantes atmosféricos.
 
 Dataset
+
 Air Quality Dataset
 
 Variables
+
 SO2
 NO2
 O3
@@ -15,10 +17,13 @@ Temperature
 Humidity
 Pressure
 WindSpeed
+
 Target:
 
 PM2_5
+
 Requisitos
+
 pip install -r requirements.txt
 
 
