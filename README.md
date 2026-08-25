@@ -1,12 +1,10 @@
 # ML (eINGT1029-1) Calidad del aire PM2.5
 
-# Air Quality PM2.5
-
 ## Descripción
-Metodología CRISP-DM (Unidad 1) para el desarrollo de un pipeline reproducible de Machine Learning enfocado en la estimación de material particulado fino (PM2.5) utilizando variables meteorológicas y contaminantes atmosféricos.
+Framework CRISP-DM para el desarrollo de un pipeline reproducible de Machine Learning enfocado en la estimación de material particulado (PM2.5) utilizando variables meteorológicas y contaminantes atmosféricos.
 
 ## Target
-PM2_5 (μg/m³) - Regresión Continua (Aprendizaje Supervisado)
+PM2_5 (μg/m³)
 
 ## Tamaño
 1,320 registros, 8 variables
