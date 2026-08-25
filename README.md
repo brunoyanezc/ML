@@ -26,7 +26,7 @@ PM2_5 (μg/m³)
 Ninguno. Inspección realizada mediante `df.isnull().sum()` y `df.duplicated().sum()`.
 
 ## Outliers y Limpieza
-Se aplicó **Winsorización** (clip al 1% y 99%) en lugar de eliminación por IQR. Esto permitió suavizar los extremos (especialmente en WindSpeed con 71 casos) sin perder registros, manteniendo el dataset original intacto.
+Se aplicó Winsorización (clip al 1% y 99%) en lugar de eliminación por IQR. Esto permitió suavizar los extremos (especialmente en WindSpeed con 71 casos) sin perder registros, manteniendo el dataset original intacto.
 
 ## Selección de Características
 A pesar de que el EDA lineal arroja que solo 3 variables correlacionan fuertemente con el target, se conservan las 7 variables predictoras para evitar un sesgo lineal prematuro antes del modelado de la Unidad 2.
