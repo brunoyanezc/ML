@@ -37,12 +37,54 @@ Se seleccionó el método **Hold-Out (70/15/15)** por sobre *K-Fold* y *Train-Te
 - **Validación (15%):** 198 registros con 7 variables.
 - **Prueba (15%):** 198 registros con 7 variables.
 
+## Unidad 2: Modelado Supervisado y Evaluación
+
+A partir del dataset preprocesado en la Unidad 1 se entrenaron y compararon distintos algoritmos de Machine Learning para la predicción de PM2.5.
+
+### Modelos Evaluados
+
+- Baseline (Dummy Regressor)
+- Elastic Net
+- Random Forest Regressor
+- XGBoost Regressor
+- Red Neuronal (MLP)
+
+### Métricas Utilizadas
+
+- RMSE
+- MAE
+- R²
+
+### Optimización de Hiperparámetros
+
+Se utilizó GridSearchCV para optimizar:
+
+- Elastic Net
+- Random Forest
+- XGBoost
+
+mediante validación cruzada de 5 particiones.
+
+### Resultado Final
+
+Tras la comparación de modelos y la optimización de hiperparámetros, XGBoost fue seleccionado como modelo final.
+
+Resultados obtenidos sobre el conjunto Test:
+
+- RMSE: 9.747
+- MAE: 7.827
+- R²: 0.764
+
+### Interpretación
+
+Los resultados indican que las variables meteorológicas y los contaminantes atmosféricos contienen información suficiente para explicar aproximadamente un 76% de la variabilidad observada en PM2.5, permitiendo construir modelos predictivos útiles para monitoreo ambiental y apoyo a la toma de decisiones.
+
 ## Casos de Uso
 Regresión ambiental, predicción de contaminación y salud pública.
 
 ## Notas
 - Todos los datos están en formato CSV
 - Las variables están en inglés
-- El entorno requiere Python 3.11 y las librerías: `pandas`, `numpy`, `matplotlib`, `seaborn` y `scikit-learn` (especificadas en el archivo `requirements.txt`).
+- El entorno requiere Python 3.11 y las librerías: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn` y `xgboost`  (especificadas en el archivo `requirements.txt`).
 - No requiere autenticación para acceder
 - Repositorio estructurado para asegurar la reproducibilidad analítica exigida.
