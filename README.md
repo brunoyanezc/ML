@@ -79,6 +79,69 @@ Resultados obtenidos sobre el conjunto Test:
 
 Los resultados indican que las variables meteorológicas y los contaminantes atmosféricos contienen información suficiente para explicar aproximadamente un 76% de la variabilidad observada en PM2.5, permitiendo construir modelos predictivos útiles para monitoreo ambiental y apoyo a la toma de decisiones.
 
+---
+
+# Unidad 3: Aprendizaje No Supervisado y Clustering
+
+## Preparación de Datos
+
+Para clustering se mantuvo la estrategia de Winsorización definida en la Unidad 1.
+
+No fue necesario aplicar One-Hot Encoding debido a que todas las variables predictoras correspondían a variables numéricas continuas.
+
+Se aplicó normalización mediante StandardScaler para evitar que variables medidas en distintas escalas dominaran artificialmente la formación de clusters.
+
+## PCA
+
+Se evaluó la reducción de dimensionalidad mediante PCA utilizando:
+
+- Scree Plot
+- Varianza explicada acumulada
+
+Se comparó el desempeño de los algoritmos con y sin PCA.
+
+Los resultados mostraron que PCA no modificó significativamente la calidad de los agrupamientos obtenidos, sugiriendo que la estructura original de los datos ya era adecuadamente representativa.
+
+## Benchmark de Algoritmos
+
+Se compararon algoritmos basados en distancia y densidad:
+
+- KMeans
+- Agglomerative Clustering
+- Birch
+- DBSCAN
+- OPTICS
+
+### Resultados
+
+| Modelo | Silhouette |
+|----------|----------:|
+| KMeans | **0.113** |
+| Birch | 0.066 |
+| Agglomerative | 0.050 |
+| DBSCAN | -0.249 |
+| OPTICS | -0.315 |
+
+## Modelo Seleccionado
+
+**KMeans** fue seleccionado por presentar el mejor Silhouette Score y el mejor desempeño global entre los algoritmos evaluados.
+
+## Interpretación mediante PM2.5
+
+Aunque PM2.5 no fue utilizado durante el entrenamiento, los clusters identificados mostraron diferencias claras en los niveles de contaminación:
+
+| Cluster | Interpretación | PM2.5 Promedio (μg/m³) |
+|----------|----------|----------:|
+| 0 | Baja contaminación | 21.59 |
+| 2 | Contaminación intermedia | 44.01 |
+| 1 | Alta contaminación | 58.06 |
+
+Los clusters obtenidos permitieron distinguir observaciones asociadas a distintos niveles de contaminación atmosférica utilizando únicamente variables meteorológicas y contaminantes ambientales.
+
+---
+
+
+
 ## Casos de Uso
 Regresión ambiental, predicción de contaminación y salud pública.
 
