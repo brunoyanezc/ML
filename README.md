@@ -79,9 +79,8 @@ Resultados obtenidos sobre el conjunto Test:
 
 Los resultados indican que las variables meteorológicas y los contaminantes atmosféricos contienen información suficiente para explicar aproximadamente un 76% de la variabilidad observada en PM2.5, permitiendo construir modelos predictivos útiles para monitoreo ambiental y apoyo a la toma de decisiones.
 
----
 
-# Unidad 3: Aprendizaje No Supervisado y Clustering
+## Unidad 3: Aprendizaje No Supervisado y Clustering
 
 ## Preparación de Datos
 
@@ -137,9 +136,6 @@ Aunque PM2.5 no fue utilizado durante el entrenamiento, los clusters identificad
 | 1 | Alta contaminación | 58.06 |
 
 Los clusters obtenidos permitieron distinguir observaciones asociadas a distintos niveles de contaminación atmosférica utilizando únicamente variables meteorológicas y contaminantes ambientales.
-
----
-
 
 
 ## Casos de Uso
